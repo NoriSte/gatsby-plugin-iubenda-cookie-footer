@@ -7,11 +7,11 @@ export const onPreRenderHTML = ({
 }, options) => {
   // the cookiePolicyId option is required
   if(!options || !options.cookiePolicyId) {
-    throw new Error("gatsby-plugin-iubenda-cookie-law: Missing `options.cookiePolicyId`");
+    throw new Error("gatsby-plugin-iubenda-cookie-footer: Missing `options.cookiePolicyId`");
   }
   // the cookiePolicyId option is siteId
   if(!options || !options.siteId) {
-    throw new Error("gatsby-plugin-iubenda-cookie-law: Missing `options.siteId`");
+    throw new Error("gatsby-plugin-iubenda-cookie-footer: Missing `options.siteId`");
   }
 
   let callback = "";
@@ -24,7 +24,7 @@ export const onPreRenderHTML = ({
   bodyComponents.push(
     React.createElement('div', {
       // see https://github.com/gatsbyjs/gatsby/issues/6299
-      key:"gatsby-plugin-iubenda-cookie-law",
+      key:"gatsby-plugin-iubenda-cookie-footer",
       dangerouslySetInnerHTML: {__html: `
 <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub.js"></script><script type="text/javascript">
 var _iub = _iub || [];

@@ -1,2 +1,6 @@
 .DS_Store
 node_modules
+
+/*.js
+!index.js
+yarn.lock

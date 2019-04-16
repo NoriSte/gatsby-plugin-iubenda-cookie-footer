@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
-context('Iubenda', () => {
-  it('The Iubenda cookie footer should push the event to the GHTM data layer', () => {
+context('Iubenda GTM', () => {
+  it('The Iubenda cookie footer should push the event to the GTM data layer', () => {
     cy.visit('http://localhost:9000');
     cy.get("#iubenda-cs-banner").should("exist");
     cy.get(".iubenda-cs-close-btn").should("exist");

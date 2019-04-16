@@ -30,7 +30,8 @@
     "commit": "npx git-cz",
     "test": "echo \"Take a look at the various test: scripts\" && exit 1",
     "test:base-configuration-test": "cd test-projects/base-configuration-test && npm run test && cd ../..",
-    "test:gtm-test-test": "cd test-projects/gtm-test && npm run test && cd ../..",
+    "test:gtm-test": "cd test-projects/gtm-test && npm run test && cd ../..",
+    "test:custom-gtm-test": "cd test-projects/custom-gtm-test && npm run test && cd ../..",
     "build": "babel src --out-dir . --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore **/__tests__"

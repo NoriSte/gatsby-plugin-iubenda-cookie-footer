@@ -1,0 +1,51 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.3.16",
+    "gatsby-image": "^2.0.37",
+    "gatsby-plugin-google-tagmanager": "^2.0.13",
+    "gatsby-plugin-manifest": "^2.0.28",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-source-filesystem": "^2.0.29",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "cypress": "^3.2.0",
+    "prettier": "^1.17.0",
+    "start-server-and-test": "^1.7.13"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "cy:open": "cypress open",
+    "plugin:link": "rm -f ./node_modules/gatsby-plugin-iubenda-cookie-footer && ln -s ../../../ ./node_modules/gatsby-plugin-iubenda-cookie-footer",
+    "plugin:copy": "mkdir -p plugins/gatsby-plugin-iubenda-cookie-footer && \\cp ../../{gatsby-browser.js,gatsby-ssr.js,package.json} plugins/gatsby-plugin-iubenda-cookie-footer/",
+    "test": "npm run plugin:link && npm run build && npm run cy:start-server-and-test",
+    "cy:start-server-and-test": "npx start-server-and-test serve :9000 cy:run",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

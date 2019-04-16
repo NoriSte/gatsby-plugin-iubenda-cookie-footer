@@ -19,7 +19,9 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "cypress": "^3.2.0",
+    "prettier": "^1.17.0",
+    "start-server-and-test": "^1.7.13"
   },
   "keywords": [
     "gatsby"
@@ -31,7 +33,12 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "cy:open": "cypress open",
+    "link:plugin": "rm -f ./node_modules/gatsby-plugin-iubenda-cookie-footer && ln -s ../../../ ./node_modules/gatsby-plugin-iubenda-cookie-footer",
+    "copy:plugin": "mkdir -p plugins/gatsby-plugin-iubenda-cookie-footer && \\cp ../../{gatsby-browser.js,gatsby-ssr.js,package.json} plugins/gatsby-plugin-iubenda-cookie-footer/",
+    "test": "npm run link:plugin && npm run build && npm run cy:start-server-and-test",
+    "cy:start-server-and-test": "npx start-server-and-test serve :9000 cy:run",
+    "cy:run": "cypress run"
   },
   "repository": {
     "type": "git",

@@ -28,12 +28,15 @@
   },
   "scripts": {
     "commit": "npx git-cz",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "yarn build ",
     "build": "babel src --out-dir . --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore **/__tests__"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.3"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
   }
 }

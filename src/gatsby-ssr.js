@@ -1,9 +1,8 @@
 import React from "react";
 import { getGTMDataLayerName, getGTMEventName, isGTMEnabled } from "./utils";
 
-export const onPreRenderHTML = ({
-  getPostBodyComponents,
-  replacePostBodyComponents,
+export const onRenderBody = ({
+  setPostBodyComponents
 }, options) => {
   // the cookiePolicyId option is required
   if(!options || !options.iubendaOptions) {
@@ -16,8 +15,7 @@ export const onPreRenderHTML = ({
     callback = `{onConsentGiven: function() { ${getGTMDataLayerName(options)}.push({ 'event': '${getGTMEventName(options)}' }); }}`
   }
 
-  const bodyComponents = getPostBodyComponents();
-  bodyComponents.push(
+  setPostBodyComponents([
     React.createElement('div', {
       // see https://github.com/gatsbyjs/gatsby/issues/6299
       key:"gatsby-plugin-iubenda-cookie-footer",
@@ -25,12 +23,9 @@ export const onPreRenderHTML = ({
 <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub.js"></script><script type="text/javascript">
 var _iub = _iub || [];
 _iub.csConfiguration = ${JSON.stringify(options.iubendaOptions)};
-_iub.csConfiguration.callback = ${callback};
+${callback ? `_iub.csConfiguration.callback = ${callback};` : ""}
 </script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async> </script>
     `}})
-    );
-
-  // WARNING: if multiple plugins implement this API it’s the last plugin that “wins”.
-  // See https://www.gatsbyjs.org/docs/ssr-apis/
-  replacePostBodyComponents(bodyComponents);
+    ]
+  );
 }

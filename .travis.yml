@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "node"
+
+
+  jobs:
+  include:
+    - stage: test
+      script: npm run test:base-configuration-test
+    - script: npm run test:gtm-test
+    - script: npm run test:custom-gtm-test

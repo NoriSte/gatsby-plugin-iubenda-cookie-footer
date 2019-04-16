@@ -6,14 +6,12 @@ context('Iubenda', () => {
     cy.get("#iubenda-cs-banner").should("exist");
     cy.get(".iubenda-cs-close-btn").should("exist");
 
-    // see https://docs.cypress.io/api/commands/stub.html#Method
+    cy.window().then(win => {
+      win.dataLayer = [];
+    });
 
     cy.get(".iubenda-cs-close-btn").click();
 
-
-
-    // cy.window().its('dataLayer.push').should('be.called')
-
-
+    cy.window().its('dataLayer').should('contain', { event: "iubenda_consent_given" });
   })
 })

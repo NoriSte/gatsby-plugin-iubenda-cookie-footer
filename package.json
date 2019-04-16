@@ -28,7 +28,8 @@
   },
   "scripts": {
     "commit": "npx git-cz",
-    "test": "yarn build ",
+    "test": "npm run build && npm run test:base-configuration-test",
+    "test:base-configuration-test": "cd test-projects/base-configuration-test && npm run test && cd ../..",
     "build": "babel src --out-dir . --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore **/__tests__"

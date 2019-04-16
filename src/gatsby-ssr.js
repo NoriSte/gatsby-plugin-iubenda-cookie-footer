@@ -10,9 +10,10 @@ export const onPreRenderHTML = ({
     throw new Error("gatsby-plugin-iubenda-cookie-footer: Missing `options.iubendaOptions`");
   }
 
+  let callback = "";
   if(isGTMEnabled(options)) {
     // see https://www.iubenda.com/en/help/1235-how-to-use-google-tag-manager-to-simplify-the-adoption-of-cookie-law-requirements
-    options.iubendaOptions.callback = `onConsentGiven: function() { ${getGTMDataLayerName(options)}.push({ 'event': '${getGTMEventName(options)}' }); }`
+    callback = `{onConsentGiven: function() { ${getGTMDataLayerName(options)}.push({ 'event': '${getGTMEventName(options)}' }); }}`
   }
 
   const bodyComponents = getPostBodyComponents();
@@ -24,6 +25,7 @@ export const onPreRenderHTML = ({
 <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub.js"></script><script type="text/javascript">
 var _iub = _iub || [];
 _iub.csConfiguration = ${JSON.stringify(options.iubendaOptions)};
+_iub.csConfiguration.callback = ${callback};
 </script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async> </script>
     `}})
     );

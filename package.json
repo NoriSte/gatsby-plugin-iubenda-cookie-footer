@@ -28,7 +28,7 @@
   },
   "scripts": {
     "commit": "npx git-cz",
-    "test": "echo \"Take a look at the various test: scripts\" && exit 1",
+    "test": "echo \"Take a look at the various test: scripts\" && exit 0",
     "test:base-configuration-test": "cd test-projects/base-configuration-test && npm run test && cd ../..",
     "test:gtm-test": "cd test-projects/gtm-test && npm run test && cd ../..",
     "test:custom-gtm-test": "cd test-projects/custom-gtm-test && npm run test && cd ../..",

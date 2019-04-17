@@ -1,6 +1,9 @@
 .DS_Store
 node_modules
 
-/*.js
+/gatsby-browser.js
+/gatsby-ssr.js
+/utils.js
+
 !index.js
 yarn.lock

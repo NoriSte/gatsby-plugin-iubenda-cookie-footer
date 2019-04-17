@@ -1,5 +1,5 @@
 # gatsby-plugin-iubenda-cookie-footer
-Easily add the Iubenda's cookie policy banner to your Gatsby site. Optionally, it integrates the
+Quickly add the Iubenda's cookie policy banner to your Gatsby site. Optionally, it integrates the
 Iubenda acceptance with Google Tag Manager.
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
@@ -42,9 +42,9 @@ plugins: [
 ]
 ```
 
-You can copy/paste the `iubendaOptions` from the Iubenda embed script
+You can copy/paste the `iubendaOptions` from the Iubenda embed script:
 
-<img src="assets/iubenda-options.jpg" alt="Cypress OTP" style="max-width:100%;" style="box-shadow: 0px 0px 6px #000000AA;"/>
+![Where to find the iubendaOptions](https://raw.githubusercontent.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/master/assets/iubenda-options-shadow.png)
 
 ### Usage with Google Tag Manager
 
@@ -82,3 +82,13 @@ plugins: [
   }
 ]
 ```
+
+## Contributing
+
+PR or issues are welcome 👋
+
+#### Notes
+
+- if you want to work on the plugin sources, remember that you need to `npm run build` on the root
+  then, in every test project, you need to run `npm run plugin:link` to locally use it
+- a nicer testing solution could be to leverage the Travis jobs/envs instead of running them synchronously

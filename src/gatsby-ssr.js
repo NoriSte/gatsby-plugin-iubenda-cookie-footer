@@ -11,8 +11,9 @@ export const onRenderBody = ({
 
   let callback = "";
   if(isGTMEnabled(options)) {
+    const gtmDataLayerName = getGTMDataLayerName(options);
     // see https://www.iubenda.com/en/help/1235-how-to-use-google-tag-manager-to-simplify-the-adoption-of-cookie-law-requirements
-    callback = `{onConsentGiven: function() { ${getGTMDataLayerName(options)}.push({ 'event': '${getGTMEventName(options)}' }); }}`
+    callback = `{onConsentGiven: function() { if(!${gtmDataLayerName}){ ${gtmDataLayerName} = [] } ${gtmDataLayerName}.push({ 'event': '${getGTMEventName(options)}' }); }}`
   }
 
   setPostBodyComponents([

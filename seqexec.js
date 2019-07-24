@@ -52,10 +52,10 @@ build = function () {
 
   // example
   var go = build(
-    'yarn build',
-    'yarn test:base-configuration-test',
-    'yarn test:gtm-test',
-    'yarn test:custom-gtm-test',
+    'npm run build',
+    'npm run test:base-configuration-test',
+    'npm run test:gtm-test',
+    'npm run test:custom-gtm-test',
   );
 
   go();

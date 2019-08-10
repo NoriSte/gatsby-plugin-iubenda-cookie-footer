@@ -8,6 +8,7 @@ Iubenda acceptance with Google Tag Manager.
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Open Source
 Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNoriSte%2Fgatsby-plugin-iubenda-cookie-footer.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FNoriSte%2Fgatsby-plugin-iubenda-cookie-footer?ref=badge_shield)
 
 ## Install
 
@@ -94,3 +95,7 @@ PR or issues are welcome 👋
 - if you want to work on the plugin sources, remember that you need to `npm run build` on the root
   then, in every test project, you need to run `npm run plugin:link` to locally use it
 - a nicer testing solution could be to leverage the Travis jobs/envs instead of running them synchronously
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNoriSte%2Fgatsby-plugin-iubenda-cookie-footer.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FNoriSte%2Fgatsby-plugin-iubenda-cookie-footer?ref=badge_large)

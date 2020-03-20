@@ -20,13 +20,27 @@ export const onRenderBody = ({
     React.createElement('div', {
       // see https://github.com/gatsbyjs/gatsby/issues/6299
       key:"gatsby-plugin-iubenda-cookie-footer",
-      dangerouslySetInnerHTML: {__html: `
-<script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub.js"></script><script type="text/javascript">
-var _iub = _iub || [];
-_iub.csConfiguration = ${JSON.stringify(options.iubendaOptions)};
-${callback ? `_iub.csConfiguration.callback = ${callback};` : ""}
-</script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async> </script>
+      dangerouslySetInnerHTML: {
+		__html: `${buildScriptsFromIubendaOptions(
+		  options.iubendaOptions,
+		  callback
+        )}
+		<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async> </script>
     `}})
     ]
   );
 }
+
+const buildScriptsFromIubendaOptions = (iubendaOptions, callback) => {
+  const options = Array.isArray(iubendaOptions)
+    ? iubendaOptions
+    : [iubendaOptions];
+
+  let fromIubendaOptionsScriptsStr = "";
+  options.forEach(item => {
+    fromIubendaOptionsScriptsStr += `<script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub.js"></script><script type="text/javascript">
+        var _iub = _iub || []; _iub.csConfiguration = ${JSON.stringify(item)};
+        ${callback ? `_iub.csConfiguration.callback = ${callback};` : ""}
+        </script>`;
+  });
+};

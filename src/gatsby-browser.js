@@ -19,7 +19,10 @@ export const onRouteUpdate = (apiCallbackContext, options) => {
   // if the `apiCallbackContext.prevLocation` is null it means that the user didn't leverage the
   // HTML5 history but, instead, he's landed here. The standard user landing behavior is tracked
   // correctly by Iubenda.
-  if(isGTMEnabled(options) && apiCallbackContext.prevLocation) {
+
+  // by checking for isConsentGiven(), this plugin can be fully compliant when
+  // consentOnContinuedBrowsing is not enabled, thus being GDPR compliant
+  if(isGTMEnabled(options) && apiCallbackContext.prevLocation && window && window._iub && window._iub.cs.api.isConsentGiven()) {
     window[getGTMDataLayerName(options)].push({ 'event': getGTMEventName(options) });
   }
 }

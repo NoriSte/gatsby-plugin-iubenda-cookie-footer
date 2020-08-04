@@ -6,6 +6,11 @@
 
 import { getGTMDataLayerName, getGTMEventName, isGTMEnabled } from "./utils";
 
+/**
+ * https://www.iubenda.com/en/help/1205-how-to-configure-your-cookie-solution-advanced-guide#api
+ */
+const isIubendaConsentGiven = () => window && window._iub && window._iub.cs.api.isConsentGiven();
+
 export const onRouteUpdate = (apiCallbackContext, options) => {
   // The Iubenda's cookie footer acceptance works like a charm except for the client-side browsing.
   // Even if the banner prompts the users that "You agree to the use of cookies by closing or
@@ -22,7 +27,7 @@ export const onRouteUpdate = (apiCallbackContext, options) => {
 
   // by checking for isConsentGiven(), this plugin can be fully compliant when
   // consentOnContinuedBrowsing is not enabled, thus being GDPR compliant
-  if(isGTMEnabled(options) && apiCallbackContext.prevLocation && window && window._iub && window._iub.cs.api.isConsentGiven()) {
+  if(isGTMEnabled(options) && apiCallbackContext.prevLocation && isIubendaConsentGiven()) {
     window[getGTMDataLayerName(options)].push({ 'event': getGTMEventName(options) });
   }
 }

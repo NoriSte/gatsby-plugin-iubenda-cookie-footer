@@ -29,12 +29,17 @@ context('Iubenda GTM client-side navigation', () => {
     cy.get("#iubenda-cs-banner").should("exist");
     cy.get(".iubenda-cs-close-btn").should("exist");
 
+    // reset dataLayer
     cy.window().then(win => {
       win.dataLayer = [];
     });
 
     cy.contains('Go to page 2').click();
 
-    cy.window().its('dataLayer').should('not.contain', { event: "iubenda_consent_given" });
+    cy.once("fail", (err) => {
+      console.log(err.message);
+      expect(err.message).to.be.equal("Timed out retrying: expected [] to include { event: 'iubenda_consent_given' }");
+    })
+    cy.window().its('dataLayer').should('contain', { event: "iubenda_consent_given" }); // we want this to fail, hence the cy.once('fail', ...) above!
   })
 })

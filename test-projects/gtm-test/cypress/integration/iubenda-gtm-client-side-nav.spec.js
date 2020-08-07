@@ -1,5 +1,10 @@
 /// <reference types="Cypress" />
 
+const containConsentGivenEvents = num => dataLayer => {
+  expect(dataLayer).contains({ event: "iubenda_consent_given" });
+  expect(dataLayer.filter(member => member.event === "iubenda_consent_given").length).to.be.equal(num);
+}
+
 context('Iubenda GTM client-side navigation', () => {
   it('The Iubenda cookie footer should push the event to the GTM data layer if consent has been given and the user navigates to a different page', () => {
     cy.visit('http://localhost:9000');
@@ -20,8 +25,10 @@ context('Iubenda GTM client-side navigation', () => {
     });
 
     cy.contains('Go to page 2').click();
+    cy.window().its('dataLayer').should(containConsentGivenEvents(1));
 
-    cy.window().its('dataLayer').should('contain', { event: "iubenda_consent_given" });
+    cy.contains('Go back to the homepage').click();
+    cy.window().its('dataLayer').should(containConsentGivenEvents(2));
   })
 
   it('The Iubenda cookie footer should not push the event to the GTM data layer if consent has not been given and the user navigates to a different page', () => {

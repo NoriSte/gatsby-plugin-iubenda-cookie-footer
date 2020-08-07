@@ -37,7 +37,6 @@ context('Iubenda GTM client-side navigation', () => {
     cy.contains('Go to page 2').click();
 
     cy.once("fail", (err) => {
-      console.log(err.message);
       expect(err.message).to.be.equal("Timed out retrying: expected [] to include { event: 'iubenda_consent_given' }");
     })
     cy.window().its('dataLayer').should('contain', { event: "iubenda_consent_given" }); // we want this to fail, hence the cy.once('fail', ...) above!

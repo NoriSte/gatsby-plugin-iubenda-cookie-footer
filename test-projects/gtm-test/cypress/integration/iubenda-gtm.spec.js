@@ -2,7 +2,7 @@
 
 context('Iubenda GTM', () => {
   it('The Iubenda cookie footer should push the event to the GTM data layer', () => {
-    cy.visit('http://localhost:9000');
+    cy.visit('/');
     cy.get("#iubenda-cs-banner").should("exist");
     cy.get(".iubenda-cs-close-btn").should("exist");
 

@@ -34,7 +34,8 @@
     "test:custom-gtm-test": "cd test-projects/custom-gtm-test && npm run test && cd ../..",
     "build": "babel src --out-dir . --ignore **/__tests__",
     "prepare": "cross-env NODE_ENV=production npm run build",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__"
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "dependencies:clear": "find . -name \"node_modules\" -exec rm -rf '{}' + && find . -name \"package-lock.json\" -exec rm '{}' +"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.3"

@@ -7,3 +7,5 @@ node_modules
 
 !index.js
 yarn.lock
+
+package-lock.json

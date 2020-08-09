@@ -7,7 +7,7 @@ const containConsentGivenEvents = num => dataLayer => {
 
 context('Iubenda GTM client-side navigation', () => {
   it('The Iubenda cookie footer should push the event to the GTM data layer if consent has been given and the user navigates to a different page', () => {
-    cy.visit('http://localhost:9000');
+    cy.visit('/');
     cy.get("#iubenda-cs-banner").should("exist");
     cy.get(".iubenda-cs-close-btn").should("exist");
 
@@ -32,7 +32,7 @@ context('Iubenda GTM client-side navigation', () => {
   })
 
   it('The Iubenda cookie footer should not push the event to the GTM data layer if consent has not been given and the user navigates to a different page', () => {
-    cy.visit('http://localhost:9000');
+    cy.visit('/');
     cy.get("#iubenda-cs-banner").should("exist");
     cy.get(".iubenda-cs-close-btn").should("exist");
 

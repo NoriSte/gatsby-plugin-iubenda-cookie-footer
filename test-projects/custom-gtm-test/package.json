@@ -5,24 +5,24 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "2.23.21",
-    "gatsby-image": "2.4.12",
-    "gatsby-plugin-google-tagmanager": "2.3.10",
-    "gatsby-plugin-manifest": "2.4.17",
-    "gatsby-plugin-offline": "3.2.16",
-    "gatsby-plugin-react-helmet": "3.3.9",
-    "gatsby-plugin-sharp": "2.6.18",
-    "gatsby-source-filesystem": "2.3.18",
-    "gatsby-transformer-sharp": "2.5.10",
+    "gatsby": "2.24.37",
+    "gatsby-image": "2.4.14",
+    "gatsby-plugin-google-tagmanager": "2.3.11",
+    "gatsby-plugin-manifest": "2.4.22",
+    "gatsby-plugin-offline": "3.2.22",
+    "gatsby-plugin-react-helmet": "3.3.10",
+    "gatsby-plugin-sharp": "2.6.25",
+    "gatsby-source-filesystem": "2.3.24",
+    "gatsby-transformer-sharp": "2.5.12",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "5.2.1"
+    "react-helmet": "6.1.0"
   },
   "devDependencies": {
-    "cypress": "3.8.3",
+    "cypress": "4.12.1",
     "prettier": "2.0.5",
-    "start-server-and-test": "1.11.0"
+    "start-server-and-test": "1.11.3"
   },
   "keywords": [
     "gatsby"
@@ -33,12 +33,12 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -p 8000",
     "cy:open": "cypress open",
     "plugin:link": "rm -f ./node_modules/gatsby-plugin-iubenda-cookie-footer && ln -s ../../../ ./node_modules/gatsby-plugin-iubenda-cookie-footer",
     "plugin:copy": "mkdir -p plugins/gatsby-plugin-iubenda-cookie-footer && \\cp ../../{gatsby-browser.js,gatsby-ssr.js,package.json} plugins/gatsby-plugin-iubenda-cookie-footer/",
     "test": "npm install && npm run plugin:link && npm run build && npm run cy:start-server-and-test",
-    "cy:start-server-and-test": "npx start-server-and-test serve :9000 cy:run",
+    "cy:start-server-and-test": "npx start-server-and-test serve :8000 cy:run",
     "cy:run": "cypress run"
   },
   "repository": {

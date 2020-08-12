@@ -108,6 +108,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://twitter.com/NoriSte"><img src="https://avatars0.githubusercontent.com/u/173663?v=4" width="100px;" alt=""/><br /><sub><b>Stefano Magni</b></sub></a><br /><a href="#ideas-NoriSte" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/commits?author=NoriSte" title="Code">💻</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/commits?author=NoriSte" title="Tests">⚠️</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/commits?author=NoriSte" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/pm990320"><img src="https://avatars0.githubusercontent.com/u/6690208?v=4" width="100px;" alt=""/><br /><sub><b>Patrick Menlove</b></sub></a><br /><a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/issues?q=author%3Apm990320" title="Bug reports">🐛</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/commits?author=pm990320" title="Code">💻</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/pulls?q=is%3Apr+reviewed-by%3Apm990320" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/commits?author=pm990320" title="Tests">⚠️</a></td>
   </tr>
 </table>
 

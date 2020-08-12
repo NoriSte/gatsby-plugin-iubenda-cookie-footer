@@ -1,7 +1,5 @@
 # gatsby-plugin-iubenda-cookie-footer
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 Quickly add the Iubenda's cookie policy banner to your Gatsby site. Optionally, it integrates the
 Iubenda acceptance with Google Tag Manager.
 

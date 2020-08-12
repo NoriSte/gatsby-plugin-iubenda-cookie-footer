@@ -1,4 +1,7 @@
 # gatsby-plugin-iubenda-cookie-footer
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 Quickly add the Iubenda's cookie policy banner to your Gatsby site. Optionally, it integrates the
 Iubenda acceptance with Google Tag Manager.
 
@@ -96,3 +99,22 @@ PR or issues are welcome 👋
 - if you want to work on the plugin sources, remember that you need to `npm run build` on the root
   then, in every test project, you need to run `npm run plugin:link` to locally use it
 - a nicer testing solution could be to leverage the Travis jobs/envs instead of running them synchronously
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://twitter.com/NoriSte"><img src="https://avatars0.githubusercontent.com/u/173663?v=4" width="100px;" alt=""/><br /><sub><b>Stefano Magni</b></sub></a><br /><a href="#ideas-NoriSte" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/commits?author=NoriSte" title="Code">💻</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/commits?author=NoriSte" title="Tests">⚠️</a> <a href="https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer/commits?author=NoriSte" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

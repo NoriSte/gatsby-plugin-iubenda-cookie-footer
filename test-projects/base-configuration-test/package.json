@@ -19,7 +19,7 @@
     "react-helmet": "6.1.0"
   },
   "devDependencies": {
-    "cypress": "4.12.1",
+    "cypress": "5.0.0",
     "prettier": "2.0.5",
     "start-server-and-test": "1.11.3"
   },

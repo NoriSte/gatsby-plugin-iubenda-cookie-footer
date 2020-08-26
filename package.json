@@ -19,7 +19,7 @@
     "@babel/core": "7.11.4",
     "babel-preset-gatsby-package": "0.5.2",
     "cross-env": "7.0.2",
-    "cz-conventional-changelog": "3.2.1"
+    "cz-conventional-changelog": "3.3.0"
   },
   "config": {
     "commitizen": {

@@ -21,7 +21,7 @@
   "devDependencies": {
     "cypress": "5.6.0",
     "prettier": "2.2.0",
-    "start-server-and-test": "1.11.5"
+    "start-server-and-test": "1.11.6"
   },
   "keywords": [
     "gatsby"

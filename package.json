@@ -15,8 +15,8 @@
   "license": "MIT",
   "repository": "https://github.com/NoriSte/gatsby-plugin-iubenda-cookie-footer",
   "devDependencies": {
-    "@babel/cli": "7.12.7",
-    "@babel/core": "7.12.7",
+    "@babel/cli": "7.12.10",
+    "@babel/core": "7.12.10",
     "babel-preset-gatsby-package": "0.9.0",
     "cross-env": "7.0.2",
     "cz-conventional-changelog": "3.3.0"

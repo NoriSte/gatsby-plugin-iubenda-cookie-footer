@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "cypress": "6.6.0",
-    "prettier": "2.2.0",
+    "prettier": "2.2.1",
     "start-server-and-test": "1.11.6"
   },
   "keywords": [

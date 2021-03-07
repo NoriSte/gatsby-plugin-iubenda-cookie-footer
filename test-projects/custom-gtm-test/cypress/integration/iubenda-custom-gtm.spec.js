@@ -15,6 +15,6 @@ context("Iubenda custom GTM", () => {
     cy.window()
       .its("customDataLayerName")
       .its("0")
-      .should('be', { event: "custom_iubenda_event_name" })
+      .should("deep.equal", { event: "custom_iubenda_event_name" })
   })
 })

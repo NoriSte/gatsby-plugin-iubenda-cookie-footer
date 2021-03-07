@@ -9,7 +9,13 @@ import { getGTMDataLayerName, getGTMEventName, isGTMEnabled } from "./utils";
 /**
  * https://www.iubenda.com/en/help/1205-how-to-configure-your-cookie-solution-advanced-guide#api
  */
-const isIubendaConsentGiven = () => window && window._iub && window._iub.cs.api.isConsentGiven();
+const isIubendaConsentGiven = () => 
+  window &&
+  window._iub &&
+  window._iub.cs &&
+  window._iub.cs.api &&
+  window._iub.cs.api.isConsentGiven &&
+  window._iub.cs.api.isConsentGiven()
 
 export const onRouteUpdate = (apiCallbackContext, options) => {
   // The Iubenda's cookie footer acceptance works like a charm except for the client-side browsing.

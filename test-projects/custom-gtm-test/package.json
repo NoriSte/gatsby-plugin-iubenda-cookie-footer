@@ -5,24 +5,22 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "3.10.0",
-    "gatsby-plugin-gatsby-cloud": "2.10.0",
-    "gatsby-plugin-image": "1.10.0",
-    "gatsby-plugin-manifest": "3.10.0",
-    "gatsby-plugin-offline": "4.10.0",
-    "gatsby-plugin-react-helmet": "4.10.0",
-    "gatsby-plugin-sharp": "3.10.0",
-    "gatsby-source-filesystem": "3.10.0",
-    "gatsby-transformer-sharp": "3.10.0",
-    "prop-types": "15.7.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-helmet": "6.1.0"
+    "gatsby": "^4.0.2",
+    "gatsby-plugin-gatsby-cloud": "^4.0.0",
+    "gatsby-plugin-image": "^2.0.0",
+    "gatsby-plugin-manifest": "^4.0.0",
+    "gatsby-plugin-offline": "^5.0.0",
+    "gatsby-plugin-react-helmet": "^5.0.0",
+    "gatsby-plugin-sharp": "^4.0.1",
+    "gatsby-source-filesystem": "^4.0.0",
+    "gatsby-transformer-sharp": "^4.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "cypress": "7.6.0",
-    "prettier": "2.3.2",
-    "start-server-and-test": "1.12.6"
+    "prettier": "^2.4.1"
   },
   "keywords": [
     "gatsby"
@@ -32,8 +30,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve -p 8000",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
     "cy:open": "cypress open",
     "plugin:link": "rm -f ./node_modules/gatsby-plugin-iubenda-cookie-footer && ln -s ../../../ ./node_modules/gatsby-plugin-iubenda-cookie-footer",
     "plugin:copy": "mkdir -p plugins/gatsby-plugin-iubenda-cookie-footer && \\cp ../../{gatsby-browser.js,gatsby-ssr.js,package.json} plugins/gatsby-plugin-iubenda-cookie-footer/",

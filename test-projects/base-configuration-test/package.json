@@ -20,7 +20,9 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "cypress": "7.6.0",
+    "prettier": "^2.4.1",
+    "start-server-and-test": "1.12.6"
   },
   "keywords": [
     "gatsby"
@@ -36,7 +38,7 @@
     "plugin:link": "rm -f ./node_modules/gatsby-plugin-iubenda-cookie-footer && ln -s ../../../ ./node_modules/gatsby-plugin-iubenda-cookie-footer",
     "plugin:copy": "mkdir -p plugins/gatsby-plugin-iubenda-cookie-footer && \\cp ../../{gatsby-browser.js,gatsby-ssr.js,package.json} plugins/gatsby-plugin-iubenda-cookie-footer/",
     "test": "npm install && npm run plugin:link && npm run build && npm run cy:start-server-and-test",
-    "cy:start-server-and-test": "npx start-server-and-test serve :8000 cy:run",
+    "cy:start-server-and-test": "npx start-server-and-test serve :9000 cy:run",
     "cy:run": "cypress run"
   },
   "repository": {

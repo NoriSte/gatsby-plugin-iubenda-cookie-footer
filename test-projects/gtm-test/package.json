@@ -1,49 +1,22 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gtm-test",
+  "version": "1.0.0",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "gatsby": "^4.0.2",
-    "gatsby-plugin-gatsby-cloud": "^4.0.0",
-    "gatsby-plugin-image": "^2.0.0",
-    "gatsby-plugin-manifest": "^4.0.0",
-    "gatsby-plugin-offline": "^5.0.0",
-    "gatsby-plugin-react-helmet": "^5.0.0",
-    "gatsby-plugin-sharp": "^4.0.1",
-    "gatsby-source-filesystem": "^4.0.0",
-    "gatsby-transformer-sharp": "^4.0.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.4.1"
-  },
+  "description": "gtm-test",
+  "author": "Stefano Magni",
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "cy:open": "cypress open",
-    "plugin:link": "rm -f ./node_modules/gatsby-plugin-iubenda-cookie-footer && ln -s ../../../ ./node_modules/gatsby-plugin-iubenda-cookie-footer",
-    "plugin:copy": "mkdir -p plugins/gatsby-plugin-iubenda-cookie-footer && \\cp ../../{gatsby-browser.js,gatsby-ssr.js,package.json} plugins/gatsby-plugin-iubenda-cookie-footer/",
-    "test": "npm install && npm run plugin:link && npm run build && npm run cy:start-server-and-test",
-    "cy:start-server-and-test": "npx start-server-and-test serve :8000 cy:run",
-    "cy:run": "cypress run"
+    "clean": "gatsby clean"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "dependencies": {
+    "gatsby": "^5.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

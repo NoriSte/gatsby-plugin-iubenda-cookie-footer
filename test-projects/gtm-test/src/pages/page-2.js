@@ -132,7 +132,9 @@ const IndexPage = () => {
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h1>
-      <Link to="/page-2/">Go to page 2</Link> <br />
+      <h1>Hi from the second page</h1>
+      <p>Welcome to page 2</p>
+      <Link to="/">Go back to the homepage</Link>
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
         update in real-time. 😎

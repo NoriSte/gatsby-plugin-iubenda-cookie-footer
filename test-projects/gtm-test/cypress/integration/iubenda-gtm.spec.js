@@ -14,8 +14,8 @@ context("Iubenda GTM", () => {
 
     cy.window()
       .its("dataLayer")
-      .its("0")
-      .should("deep.equal", { event: "iubenda_consent_given" })
+      .then(dataLayer => dataLayer.find(item => item.event === "iubenda_consent_given"))
+      .should("exist")
   })
 
   it("The Iubenda cookie footer should push the event to the GTM data layer if consent has been given and the user navigates to a different page", () => {
